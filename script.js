@@ -6,14 +6,16 @@ function Person(name, age) {
 };
 // adding a method to the Person prototype
 Person.prototype.greet = function() {
-	console.log(`Hello, my name is ${this._name}, I am ${this._age} years old.`)
+	console.log(`Hello, my name is ${this._name} and I am ${this._age} years old.`)
 };
 
-
+// Constructor function for employee
 function Employee(name, age, jobTitle) {
+	// Calling the Person constructor to initialize name and age
 	Person.call(this, name, age);
 	this._jobTitle = jobTitle;
 };
+// 
 Employee.prototype = Object.create(Person.prototype);
 
 Employee.prototype.jobGreet = function() {
