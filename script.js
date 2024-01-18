@@ -1,11 +1,12 @@
 // complete this js code
+// Constructor function for Person
 function Person(name, age) {
 	this._name = name;
 	this._age = age;
 };
-
+// adding a method to the Person prototype
 Person.prototype.greet = function() {
-	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`)
+	console.log(`Hello, my name is ${this._name}, I am ${this._age} years old.`)
 };
 
 
@@ -16,7 +17,7 @@ function Employee(name, age, jobTitle) {
 Employee.prototype = Object.create(Person.prototype);
 
 Employee.prototype.jobGreet = function() {
-	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`)
+	console.log(`Hello, my name is ${this._name}, I am ${this._age} years old, and my job title is ${this._jobTitle}.`)
 
 };
 
